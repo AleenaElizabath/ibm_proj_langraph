@@ -61,14 +61,10 @@
       outline: none;
     }
 
-    .input-area button {
-      background: #4a90e2;
+    .input-area{
+      background: #4fe24a;
       color: white;
       border: none;
       padding: 10px 16px;
       cursor: pointer;
-    }
-
-    .input-area button:hover {
-      background: #357ABD;
     }

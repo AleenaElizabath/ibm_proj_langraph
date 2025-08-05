@@ -230,8 +230,9 @@
     }
    ],
    "source": [
-    "def get_graph()\n",
-    "    return graph = builder.compile()\n"
+    "graph = builder.compile()\n",
+    "final_state = graph.invoke({})\n",
+    "print(final_state)"
    ]
   }
  ],

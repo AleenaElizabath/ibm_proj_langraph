@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": 17,
    "metadata": {
     "id": "4nAd0K5yOAPP"
    },
@@ -21,20 +21,11 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": 18,
    "metadata": {
     "id": "OYItAbnaPA6f"
    },
-   "outputs": [
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "c:\\Users\\jerar\\anaconda3\\envs\\bot\\Lib\\site-packages\\tqdm\\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html\n",
-      "  from .autonotebook import tqdm as notebook_tqdm\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "import os\n",
     "import getpass\n",
@@ -45,7 +36,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
+   "execution_count": 19,
    "metadata": {
     "colab": {
      "base_uri": "https://localhost:8080/"
@@ -53,14 +44,22 @@
     "id": "Od9CLvABPmu_",
     "outputId": "cb135c59-cf4e-40f2-8b53-019d0e2fb806"
    },
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the gemini Gemini API key:  ········\n"
+     ]
+    }
+   ],
    "source": [
     "os.environ['GOOGLE_API_KEY']=getpass.getpass(\"Enter the gemini Gemini API key: \")"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
+   "execution_count": 20,
    "metadata": {
     "id": "Gc_iwr_RQK3Q"
    },
@@ -71,7 +70,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
+   "execution_count": 21,
    "metadata": {
     "id": "fJiMKo1vQ3EI"
    },
@@ -85,7 +84,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 6,
+   "execution_count": 22,
    "metadata": {
     "id": "5_7MFQ9HSqah"
    },
@@ -103,7 +102,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
+   "execution_count": 23,
    "metadata": {
     "id": "HvkAS9kTT-dd"
    },
@@ -126,7 +125,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
+   "execution_count": 24,
    "metadata": {
     "id": "RvuOXPGIUvhE"
    },
@@ -145,7 +144,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 9,
+   "execution_count": 25,
    "metadata": {
     "id": "4ZyppUXjZ41N"
    },
@@ -163,7 +162,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 10,
+   "execution_count": 26,
    "metadata": {
     "colab": {
      "base_uri": "https://localhost:8080/"
@@ -175,10 +174,10 @@
     {
      "data": {
       "text/plain": [
-       "<langgraph.graph.state.StateGraph at 0x2481ae0fec0>"
+       "<langgraph.graph.state.StateGraph at 0x1ddfe234da0>"
       ]
      },
-     "execution_count": 10,
+     "execution_count": 26,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -201,7 +200,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 12,
+   "execution_count": 27,
    "metadata": {
     "colab": {
      "base_uri": "https://localhost:8080/"
@@ -209,30 +208,18 @@
     "id": "0AJBmSkOcZiG",
     "outputId": "42d70dac-5a7b-4e58-83b3-a3dc0c64a016"
    },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Category is Transport\n",
-      "Two significant environmental impacts of using cars are:\n",
-      "\n",
-      "1. **Greenhouse gas emissions:** Cars, especially those powered by gasoline or diesel, release significant amounts of greenhouse gases (GHGs) like carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O) into the atmosphere.  These gases contribute to climate change by trapping heat and warming the planet.\n",
-      "\n",
-      "2. **Air pollution:**  The combustion of fuel in car engines produces various air pollutants, including particulate matter (PM), nitrogen oxides (NOx), and volatile organic compounds (VOCs).  These pollutants can harm human health (causing respiratory problems, for example) and damage ecosystems, contributing to acid rain and smog.\n",
-      "Two environmentally friendly alternatives to cars are:\n",
-      "\n",
-      "1. **Electric bicycles (e-bikes):**  E-bikes offer a low-impact way to travel shorter to medium distances, reducing reliance on fossil fuels.  Their environmental impact is significantly lower than cars, particularly if the electricity used to charge them comes from renewable sources.  They also contribute to less traffic congestion and noise pollution in urban areas.\n",
-      "\n",
-      "2. **Public transportation (buses, trains, subways):**  Using public transportation is a highly effective way to reduce individual carbon footprints.  Sharing transportation means fewer vehicles on the road, leading to less pollution and reduced energy consumption per person.  Many cities are investing in expanding and improving their public transit systems, making them a more viable option for commuting and travel.\n",
-      "{'val': 'car', 'category': 'transport', 'res1': 'Two significant environmental impacts of using cars are:\\n\\n1. **Greenhouse gas emissions:** Cars, especially those powered by gasoline or diesel, release significant amounts of greenhouse gases (GHGs) like carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O) into the atmosphere.  These gases contribute to climate change by trapping heat and warming the planet.\\n\\n2. **Air pollution:**  The combustion of fuel in car engines produces various air pollutants, including particulate matter (PM), nitrogen oxides (NOx), and volatile organic compounds (VOCs).  These pollutants can harm human health (causing respiratory problems, for example) and damage ecosystems, contributing to acid rain and smog.', 'res': 'Two environmentally friendly alternatives to cars are:\\n\\n1. **Electric bicycles (e-bikes):**  E-bikes offer a low-impact way to travel shorter to medium distances, reducing reliance on fossil fuels.  Their environmental impact is significantly lower than cars, particularly if the electricity used to charge them comes from renewable sources.  They also contribute to less traffic congestion and noise pollution in urban areas.\\n\\n2. **Public transportation (buses, trains, subways):**  Using public transportation is a highly effective way to reduce individual carbon footprints.  Sharing transportation means fewer vehicles on the road, leading to less pollution and reduced energy consumption per person.  Many cities are investing in expanding and improving their public transit systems, making them a more viable option for commuting and travel.'}\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
-    "def get_graph()\n",
-    "    return graph = builder.compile()\n"
+    "def get_graph():\n",
+    "    return builder.compile()\n"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {

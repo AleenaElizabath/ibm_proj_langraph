@@ -11,9 +11,9 @@
   <div class="chat-container">
     <div class="chat-header">Chatbot</div>
     <div class="chat-box" id="chat-box"></div>
-    <div class="input-area">
-      <input type="text" id="user-input" placeholder="Type a message..." />
-      <button onclick="sendMessage()">Send</button>
+    <form class="input-area" method="post">
+      <input type="text" id="user-input" name="input"  placeholder="Enter your commodity" />
+      <input type="submit" class="input-area" value="Send"/>
     </div>
   </div>
 
