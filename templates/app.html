@@ -15,6 +15,14 @@
       <input type="text" id="user-input" name="input"  placeholder="Enter your commodity" />
       <input type="submit" class="input-area" value="Send"/>
     </div>
+    {% if result %}
+    <div class="result-box">
+        <h3>Environmental Impacts:</h3>
+        <p>{{ result.res1 }}</p>
+        <h3>Eco-Friendly Alternatives:</h3>
+        <p>{{ result.res }}</p>
+    </div>
+  {% endif %}
   </div>
 
   <script>
