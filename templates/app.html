@@ -8,15 +8,15 @@
 </head>
 <body>
 
-  <div class="chat-container">
-    <div class="chat-header">Chatbot</div>
-    <div class="chat-box" id="chat-box"></div>
-    <form class="input-area" method="post">
+  <div >
+    <div >Chatbot</div>
+    <div ></div>
+    <form method="post">
       <input type="text" id="user-input" name="input"  placeholder="Enter your commodity" />
-      <input type="submit" class="input-area" value="Send"/>
+      <input type="submit"  value="Send"/>
     </div>
     {% if result %}
-    <div class="result-box">
+    <div >
         <h3>Environmental Impacts:</h3>
         <p>{{ result.res1 }}</p>
         <h3>Eco-Friendly Alternatives:</h3>
@@ -25,35 +25,5 @@
   {% endif %}
   </div>
 
-  <script>
-    function sendMessage() {
-      const input = document.getElementById('user-input');
-      const message = input.value.trim();
-      if (message === '') return;
-
-      appendMessage(message, 'user');
-      input.value = '';
-
-      // Simulate bot response
-      setTimeout(() => {
-        const botResponse = getBotReply(message);
-        appendMessage(botResponse, 'bot');
-      }, 600);
-    }
-
-    function appendMessage(text, sender) {
-      const chatBox = document.getElementById('chat-box');
-      const messageDiv = document.createElement('div');
-      messageDiv.className = `message ${sender}-message`;
-      messageDiv.innerText = text;
-      chatBox.appendChild(messageDiv);
-      chatBox.scrollTop = chatBox.scrollHeight;
-    }
-
-    function getBotReply(userMessage) {
-      // Placeholder logic for demo
-      return "You said: " + userMessage;
-    }
-  </script>
 </body>
 </html>
